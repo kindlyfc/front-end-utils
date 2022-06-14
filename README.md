@@ -8,6 +8,7 @@
 3. 执行`yarn run test`运行测试脚本；
 4. 新建或找到`docs/xxx.md`，进行工具文档编写；
 5. 执行`npm login`登录自己的npm账号，更改`package.json`中“version”，执行`npm publish`发布工具；
+6. 请注意：未通过eslint校验或测试脚本的代码将提交失败；
 
 ### 使用
 
