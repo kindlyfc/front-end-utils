@@ -1,11 +1,19 @@
-const eslintrc = {
-  extends: [require.resolve('@yueqing/lint/lib/ts-eslint')],
+module.exports = {
+  extends: ['plugin:@typescript-eslint/recommended', 'eslint-config-airbnb-base', 'plugin:prettier/recommended'],
   parserOptions: {
-    project: './tsconfig.eslint.json',
+    ecmaVersion: 2020,
+    project: './tsconfig.eslint.json'
   },
+  parser: '@typescript-eslint/parser',
+  plugins: ['prettier'],
   rules: {
-    // custom rules
+    'prettier/prettier': 'error',
+    'import/extensions': ['error', 'never'],
+    'import/no-unresolved': 0,
+    'no-console': 0,
+    '@typescript-eslint/ban-types': 0
   },
+  env: {
+    jest: true
+  }
 }
-
-module.exports = eslintrc

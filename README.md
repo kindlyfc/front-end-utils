@@ -1,14 +1,17 @@
 # fly-helper
 
-It's a Tool library, method collection.
+前端工具库，编写、使用方法如下：
 
-![test](https://github.com/simonwong/fly-helper/workflows/test/badge.svg)
-[![codecov](https://codecov.io/gh/simonwong/fly-helper/branch/master/graph/badge.svg)](https://codecov.io/gh/simonwong/fly-helper)
-[![Build Status](https://travis-ci.com/simonwong/fly-helper.svg?branch=master)](https://travis-ci.com/simonwong/fly-helper)
+### 编写、发布
+1. 新建或找到`src/xxx.ts`，进行工具方法编写，若新建`ts`文件，须在`src/index.ts`中声明并导出；
+2. 新建或找到`test/xxx.test.ts`，进行工具测试脚本编写；
+3. 执行`yarn run test`运行测试脚本；
+4. 新建或找到`docs/xxx.md`，进行工具文档编写；
+5. 执行`npm login`登录自己的npm账号，更改`package.json`中“version”，执行`npm publish`发布工具；
 
-## Usage
+### 使用
 
-- install
+- 安装
 
 ```shell
 npm install fly-helper --save
@@ -18,15 +21,17 @@ npm install fly-helper --save
 yarn add fly-helper
 ```
 
-- example
+- 使用示例
 
 ```javascript
 import { isNumber } from 'fly-helper'
 
-isNumber()
+regUserName()
 ```
 
-
-## License
-
-The scripts and documentation in this project are released under the [MIT License](https://github.com/simonwong/fly-helper/blob/master/LICENSE)
+### 相关技术链接
+- [模块打包器rollup](https://www.rollupjs.com/)
+- [文档搭建vitepress](https://vitepress.vuejs.org/)
+- [测试jest](https://www.jestjs.cn/)
+- [发布npm包](https://juejin.cn/post/7052307032971411463)
+- [eslint标准airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
