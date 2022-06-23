@@ -43,7 +43,7 @@ module.exports = {
         text: '工具',
         items: [
           { text: '正则验证', link: '/reg' },
-          { text: '其他工具', link: '/index' }
+          { text: '通用工具', link: '/common' }
         ]
       }
     ]

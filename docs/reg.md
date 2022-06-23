@@ -33,7 +33,7 @@ map:
 </table>
 
 ```javascript
-import { regUserName } from '@datawis/fly-helper'
+import { regUserName } from '@datawis/utils'
 regUserName(string,min,max)
 ```
 
@@ -60,7 +60,7 @@ regUserName(string,min,max)
 </table>
 
 ```javascript
-import { regPassword } from '@datawis/fly-helper'
+import { regPassword } from '@datawis/utils'
 regPassword(string,min,max)
 ```
 
@@ -87,7 +87,7 @@ regPassword(string,min,max)
 </table>
 
 ```javascript
-import { regRealName } from '@datawis/fly-helper'
+import { regRealName } from '@datawis/utils'
 regRealName(string,min,max)
 ```
 
@@ -110,6 +110,6 @@ regRealName(string,min,max)
 </table>
 
 ```javascript
-import { regPhoneNumber } from '@datawis/fly-helper'
+import { regPhoneNumber } from '@datawis/utils'
 regPhoneNumber(string)
 ```
