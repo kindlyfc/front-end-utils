@@ -1,4 +1,4 @@
-# fly-helper
+# datawis/utils
 
 前端工具库，编写、使用方法如下：
 
@@ -7,19 +7,20 @@
 2. 新建或找到`test/xxx.test.ts`，进行工具测试脚本编写；
 3. 执行`yarn run test`运行测试脚本；
 4. 新建或找到`docs/xxx.md`，进行工具文档编写；
-5. 执行`npm login`登录自己的npm账号，更改`package.json`中“version”，执行`npm publish`发布工具；
-6. 请注意：未通过eslint校验或测试脚本的代码将提交失败；
+5. 执行`yarn run build`，进行工具打包；
+6. 执行`npm login`登录自己的npm账号，更改`package.json`中“version”，执行`npm publish`发布工具；
+7. 请注意：未通过eslint校验或测试脚本的代码将提交失败；
 
 ### 使用
 
 - 安装
 
 ```shell
-npm install fly-helper --save
+npm install @datawis/utils
 
 # or
 
-yarn add fly-helper
+yarn add @datawis/utils
 ```
 
 - 使用示例
