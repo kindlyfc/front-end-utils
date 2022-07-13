@@ -1,0 +1,91 @@
+{
+  "name": "@datawis/utils",
+  "version": "1.0.2",
+  "description": "工具库",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": "http://git.datawis.cn/datawis/utils.git",
+  "author": "Simon",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "http://git.datawis.cn/datawis/utils/src/branch/master/README.md",
+  "scripts": {
+    "build": "gulp build",
+    "api": "api-extractor run",
+    "test": "jest --coverage --verbose -u",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
+    "changelog": "gulp changelog",
+    "version": "yarn changelog && git add CHANGELOG.md",
+    "release": "yarn test && yarn build && np --no-cleanup --yolo --any-branch",
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "7.16.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/fs-extra": "^9.0.13",
+    "@types/gulp": "^4.0.9",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "5.3.0",
+    "@typescript-eslint/parser": "^5.27.1",
+    "@yueqing/lint": "^2.2.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-define-config": "1.1.2",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.4.0",
+    "np": "^7.6.1",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "ts-jest": "^27.1.4",
+    "ts-loader": "^9.3.0",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.3",
+    "vitepress": "^1.0.0-alpha.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.17.9",
+    "@microsoft/api-extractor": "^7.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "conventional-changelog": "^3.1.25",
+    "i": "^0.3.7",
+    "npm": "^8.12.1",
+    "gulp": "^4.0.2",
+    "fs-extra": "^10.1.0",
+    "chalk": "^4.1.2",
+    "rollup": "^2.70.2"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix --format=pretty"
+    ]
+  }
+}
